@@ -1,21 +1,10 @@
 ---
-import Header from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-const pageTitle = 'blog';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+const pageTitle = 'gregory pappas: blog';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<h1>gregory pappas</h1>
-        <h2>{pageTitle}</h2>
-        <Header/>
+        <BaseLayout pageTitle={pageTitle}>
+        <h2>blog</h2>
         <p>Look I am blogging</p>
         <ul>
             <li>
@@ -28,6 +17,9 @@ const pageTitle = 'blog';
                 <a href="/posts/three">Third post!</a>
             </li>
         </ul>
-        <Footer/>
+        </BaseLayout>
+        <script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
