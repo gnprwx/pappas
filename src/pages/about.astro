@@ -1,12 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/global.css';
-const pageTitle = 'gregory pappas: about me';
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "gregory pappas: about me";
 const identity = {
-    firstName: 'Greg',
-    country: 'usa',
-    occupation: 'student',
-    hobbies: ['music', 'programming', 'front-end']
+    firstName: "Greg",
+    country: "usa",
+    occupation: "student",
+    hobbies: ["music", "programming", "front-end"],
 };
 const skills = ["HTML", "CSS", "JavaScript", "Webpack", "Astro"];
 const happy = true;
@@ -14,25 +13,23 @@ const finished = false;
 const goal = 3;
 ---
 
-<html lang="en">
-        <BaseLayout pageTitle={pageTitle}>
-        <h2>about me</h2>
-        <li>My name is {identity.firstName}</li>
-        <li>I live in {identity.country} and I am a {identity.occupation}.</li>
-        <p>my hobbies are:</p>
-        <ul>
-            {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
-        </ul>
-        <p>my skills are:</p>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
-        {happy && <p> I am happy</p>}
-        {finished && <p>I am finished</p>}
-        {goal === 3 ? <p>I finished in three days</p>: <p>I did not finish in three days.</p>}
-        </BaseLayout>
-        <script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <h2>about me</h2>
+    <li>My name is {identity.firstName}</li>
+    <li>I live in {identity.country} and I am a {identity.occupation}.</li>
+    <p>my hobbies are:</p>
+    <ul>
+        {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
+    </ul>
+    <p>my skills are:</p>
+    <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+    {happy && <p> I am happy</p>}
+    {finished && <p>I am finished</p>}
+    {goal === 3 ? (<p>I finished in three days</p>) 
+    : (<p>I did not finish in three days.</p>)}
+</BaseLayout>
+<script>
+    import "../scripts/menu.js";
+</script>
