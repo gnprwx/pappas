@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -188,21 +198,42 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"posts": {
-"01-the-power-of-react-hooks copy.md": {
-	id: "01-the-power-of-react-hooks copy.md";
-  slug: "the-power-of-react-hooks";
+		"blog": {
+"first-post.md": {
+	id: "first-post.md";
+  slug: "first-post";
   body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"02-untitled.md": {
-	id: "02-untitled.md";
-  slug: "untitled";
+"markdown-style-guide.md": {
+	id: "markdown-style-guide.md";
+  slug: "markdown-style-guide";
   body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"second-post.md": {
+	id: "second-post.md";
+  slug: "second-post";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"third-post.md": {
+	id: "third-post.md";
+  slug: "third-post";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"using-mdx.mdx": {
+	id: "using-mdx.mdx";
+  slug: "using-mdx";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 };
 
 	};
