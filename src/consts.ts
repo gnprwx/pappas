@@ -1,5 +1,5 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'pappas.sh';
-export const SITE_DESCRIPTION = 'becoming a programmer';
+export const SITE_TITLE = "pappas.sh";
+export const SITE_DESCRIPTION = "just full-stack things";
