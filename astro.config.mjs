@@ -7,4 +7,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
     site: "https://pappas.sh",
     integrations: [mdx(), sitemap()],
+    markdown: {
+        shikiConfig: {
+            theme: "dracula",
+            wrap: true,
+        },
+    },
 });
