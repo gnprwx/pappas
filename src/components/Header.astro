@@ -1,11 +1,12 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">~/pappas.sh</a></h2>
-		<div class="internal-links">
+		<h2><a href="/">~/{SITE_TITLE}</a></h2>
+		<div class="internal-links" style="margin-left: -100px;">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 		</div>
@@ -29,6 +30,7 @@ import HeaderLink from './HeaderLink.astro';
 		background: rgb(6, 36, 6);
 		box-shadow: 0 2px 8px rgb(0, 99, 0);
 		border-bottom: 1px solid green;
+	}
 	h2 {
 		margin: 0;
 		font-size: 1em;
