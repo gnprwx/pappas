@@ -24,7 +24,7 @@ With the backend ready to go, I created a component with the fetch statement. Th
 ```jsx
 import { useState, useEffect } from "react";
 export default function ScoreBoard() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     useEffect(() => {
         async function fetchData() {
             try {
