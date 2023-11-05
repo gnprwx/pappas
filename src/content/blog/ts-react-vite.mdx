@@ -19,7 +19,7 @@ Today I transplanted an Express API I wrote for a group project that recently sw
 Oh, you want details? No? Well, I'm going to tell you anyway.
 For one, I needed to have both Vite and Express run on different ports in my developer environment so React could communicate with the server for data. I incorporated express CORS, removed express static, and specified the port in the fetch statement. There was another option I saw with using an alias in the package.json file, but that wasn't appealing. I also felt the CORS method was the appropriate way to bridge that gap.
 
-With the backend ready to go, I created a component with the fetch statement. That's when I learned about **useEffect**. From what ** I currently understand** in my use case, it will render changes in the useState variable **data** inside the fetchData function, making the changes available in our return statement. With useEffect and useState, we get the same functionality we'd expect in JavaScript in fetching data, but with the ability to automatically re-render that portion of the DOM.
+With the backend ready to go, I created a component with the fetch statement. That's when I learned about **useEffect**. From what **I currently understand** in my use case, it will render changes in the useState variable **data** inside the fetchData function, making the changes available in our return statement. With useEffect and useState, we get the same functionality we'd expect in JavaScript in fetching data, but with the ability to automatically re-render that portion of the DOM.
 
 ```jsx
 import { useState, useEffect } from "react";
