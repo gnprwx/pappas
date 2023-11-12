@@ -21,7 +21,7 @@ For one, I needed to have both Vite and Express run on different ports in my dev
 
 With the backend ready to go, I created a component with the fetch statement. That's when I learned about **useEffect**. From what **I currently understand** in my use case, it will render changes in the useState variable **data** inside the fetchData function, making the changes available in our return statement. With useEffect and useState, we get the same functionality we'd expect in JavaScript in fetching data, but with the ability to automatically re-render that portion of the DOM.
 
-**EDIT NOV 11 2023**: I learned you can break out the async function in this circumstance (which I have done). However, it is apparently recommended to use **useCallback async** intead of an async function due to further prevention of re-rendering (still hazy how that can be any different between the two, but maybe because it's specifically a react hook?). I also learned - but will not present it here - that this can be done using a reducer. However, that would be a bit much for this example I was working on.
+**EDIT NOV 11 2023**: I learned you can break out the async function in this circumstance (which I have done). However, it is apparently recommended to use **useCallback async** instead of an async function due to further prevention of re-rendering (still hazy how that can be any different between the two, but maybe because it's specifically a react hook?). I also learned - but will not present it here - that this can be done using a reducer. However, that would be a bit much for this example I was working on.
 
 ```jsx
 import { useState, useEffect } from "react";
