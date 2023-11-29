@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h3>Projects</h3>
+			<hr>
+			<h5><a href="https://songification.onrender.com/" target="_blank">Songification</a></h5>
+			<p>A web app providing Spotify song recommendations by anonymous user submissions.</p>
+			<ul>
+				<li>Front-end: React, Typescript, Axios, Vite</li>
+				<li>Back-end: Express, Node, Javascript, postgreSQL</li>
+				<li>Check out the <a href="https://github.com/gnprwx/songification" target="_blank">Github repository</a></li>
+			</ul>
+			<h5><a href="https://haolehandyman.com" target="_blank">Haole Handyman</a></h5>
+			<p>is a website I made for an Oahu-based business that performs house renovations and repairs.</p>
+			<ul>
+				<li>Front-end: React, Typescript, Vite</li>
+				<li>Check out the <a href="https://github.com/gnprwx/haole-handyman" target="_blank">Github repository</a></li>
+			</ul>
+			<h5><a href="https://nullmb.onrender.com/" target="_blank">Null Message Board</a></h5>
+			<p>is an anonymous message board, utilizing session-unique usernames to write posts.</p>
+			<ul>
+				<li>Front-end: HTML, CSS, JavaScript</li>
+				<li>Back-end: Node, Express, PostgreSQL</li>
+				<li>Check out the <a href="https://github.com/gnprwx/nullmb" target="_blank">Github repository</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
