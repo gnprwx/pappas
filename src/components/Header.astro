@@ -5,8 +5,8 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">~/{SITE_TITLE}</a></h2>
-		<div class="internal-links" style="margin-left: -100px;">
+		<h2 class="site-name"><a href="/">~/{SITE_TITLE}</a></h2>
+		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/projects">Projects</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -56,13 +56,19 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	.internal-links {
+		margin-left: -100px;
+	}
 	.social-links,
 	.social-links a {
 		display: flex;
 	}
 	@media (max-width: 720px) {
-		.social-links {
+		.site-name {
 			display: none;
+		}
+		.internal-links {
+			margin: 0;
 		}
 	}
 </style>
