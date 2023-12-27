@@ -1,11 +1,11 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-const headFootBase = "bg-stone-950 border-b border-green-900 text-green-300 text-lg px-2 shadow-xl";
+const HEAD = "bg-stone-950 border-b border-green-900 text-green-300 sm:text-xl text-lg px-2 shadow-xl";
 ---
 
-<header class={headFootBase}>
+<header class={HEAD}>
 	<nav class="flex flex-col justify-center items-center">
-		<div class="flex gap-3">
+		<div class="flex gap-5">
 			<HeaderLink href="/">home</HeaderLink>
 			<HeaderLink href="/log">log</HeaderLink>
 		</div>
