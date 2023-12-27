@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import {ROOT} from "../../styles/style";
+import {BASE, ROOT, TITLE, LINE} from "../../styles/style";
 
 const posts = (await getCollection('log')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -19,12 +19,14 @@ const posts = (await getCollection('log')).sort(
 	</head>
 	<body>
 		<Header />
-		<main class="text-green-300 text-center text-2xl">
+		<main class=`${BASE} text-center text-2xl`>
+			<p class={TITLE}>~/posts</p>
+			<hr class=`my-6 ${LINE}`>
 			<section>
 				<ul>
 					{
 						posts.map(({slug, data:{title, pubDate}}) => (
-							<li class="m-4">
+							<li class="my-6">
 								<a href={`/log/${slug}/`}>
 									<h4 class="font-bold">{title}</h4>
 									<p>
