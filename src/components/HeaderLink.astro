@@ -9,6 +9,6 @@ const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
-<a href={href} class={`sm:py-5 py-2 ${isActive && 'border-b-4 font-bold border-green-300'}`}>
+<a href={href} class={`sm:py-5 py-2 font-bold ${isActive && 'border-b-4 border-green-300'}`}>
 	<slot />
 </a>
