@@ -3,15 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-
-const ROOT = "bg-zinc-900 sm:pb-0 pb-6";
-const BASE = "mx-auto max-w-5xl text-green-300 pb-5 px-2";
-const TITLE = "text-center sm:text-6xl text-4xl font-bold text-green-300 mb-2";
-const SUBTITLE = "text-4xl font-bold";
-const PROJECT_TITLE = "text-3xl font-bold text-green-200";
-const LINE = "border-b-2 border-green-300/50 mb-2";
-const PARA = "text-emerald-200 bg-gradient-to-t from-green-950/30 to-transparent rounded border border-green-500/20 shadow-[0_0_10px_rgba(0,128,0,0.16)] mb-4 p-4"
-const LINK = "font-bold underline";
+import { ROOT, BASE, TITLE, SUBTITLE, LINE, PARA, PROJECT_TITLE, LINK } from "../styles/style";
 ---
 
 <!doctype html>
@@ -23,44 +15,41 @@ const LINK = "font-bold underline";
 		<Header title={SITE_TITLE} />
 		<main class={BASE}>
 			<p class={TITLE}>~/{SITE_TITLE}</p>
-			<p class=`${PARA} sm:text-xl text-lg`>
-				My name is Greg Pappas and I am a Full-Stack Developer. I started to learn programming back in March 2023 and then attended a 4 month bootcamp through Galvanize in September of 2023. I have created several projects during that time, and been on teams where I've assumed roles as Project Manager and UI/UX lead.
-			</p>
 			<p class={SUBTITLE}>skills</p>
 			<hr class={LINE}>
 			<p class=`${PARA} sm:text-2xl text-xl`>React, Astro, Typescript, JavaScript, HTML, TailwindCSS, CSS, Node, Express, Docker, PostgreSQL, Git, Vite, Figma, Photoshop</p>
 			<p class={SUBTITLE}>projects</p>
 			<hr class={LINE}>
-			<p class={PROJECT_TITLE}>audioo</p>
 			<div class={PARA}>
-				<p>A web app that promotes focus, relaxation, and sleep through playing a variety of sounds. </p>
+				<p class={PROJECT_TITLE}>audioo</p>
+				<p class="italic">Promotes focus, relaxation, and sleep through playing a variety of sounds. </p>
 				<ul>
 					<li>Front-end: React, Typescript, React Howler, React Router, Tailwind CSS, Vite Image Tools, Vite, Netlify</li>
 					<li class={LINK}><a href="https://github.com/gnprwx/audioo" target="_blank">github repository</a></li>
 					<li class={LINK}><a href="https://audioo.org" target="_blank">audioo.org</a></li>
 				</ul>
 			</div>
-			<p class={PROJECT_TITLE}>songification</p>
 			<div class={PARA}>
-				<p>A web app providing Spotify song recommendations by anonymous user submissions.</p>
+				<p class={PROJECT_TITLE}>songification</p>
+				<p class="italic">Provides Spotify song recommendations by anonymous user submissions.</p>
 				<ul>
 					<li>Front-end: React, Typescript, Tailwind CSS, Axios, Vite, Render</li>
 					<li>Back-end: Express, Javascript, postgreSQL, Render</li>
 					<li class={LINK}><a href="https://github.com/gnprwx/songification" target="_blank">github repository</a></li>
 				</ul>
 			</div>
-			<p class={PROJECT_TITLE}>haole handyman</p>
 			<div class={PARA}>
-				<p>is a website I made for an Oahu-based business that performs house renovations and repairs.</p>
+				<p class={PROJECT_TITLE}>haole handyman</p>
+				<p class="italic">Designed for an Oahu-based business that performs house renovations and repairs.</p>
 				<ul>
 					<li>Front-end: React, Typescript, React Router, Tailwind CSS, Vite, Netlify</li>
 					<li class={LINK}><a href="https://github.com/gnprwx/haole-handyman" target="_blank">github repository</a></li>
 					<li class={LINK}><a href="https://haolehandyman.com" target="_blank">haolehandyman.com</a></li>
 				</ul>
 			</div>
-			<p class={PROJECT_TITLE}>null message board</p>
 			<div class={PARA}>
-				<p>is an anonymous message board, utilizing session-unique usernames to write posts.</p>
+				<p class={PROJECT_TITLE}>null message board</p>
+				<p class="italic">Anonymous message board, utilizing session-unique usernames to write posts under.</p>
 				<ul>
 					<li>Front-end: HTML, CSS, JavaScript, Render</li>
 					<li>Back-end: Node, Express, PostgreSQL, Render</li>
