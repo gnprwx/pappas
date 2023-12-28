@@ -7,6 +7,6 @@ export const PROJECT_TITLE = "sm:text-3xl text-2xl font-bold text-green-200 unde
 export const SUBJECT = "text-3xl font-bold text-green-200"
 export const LINE = "border-b-2 border-green-300/50 mb-2";
 export const PARA =
-  "text-emerald-200 bg-gradient-to-b from-green-950/20 to-green-900/20 border border-green-300/30 shadow rounded sm:text-lg mb-4 px-4 py-2";
+  "text-emerald-200 bg-gradient-to-t from-green-950/30 to-transparent border border-green-300/20 shadow rounded sm:text-lg mb-4 px-4 py-2";
 export const LINK = "font-bold underline";
 export const MDX = "mx-auto prose prose-invert sm:prose-lg text-green-200";
