@@ -1,11 +1,10 @@
 ---
 import { SITE_TITLE } from '../consts';
-const today = new Date();
 const headFootBase = "flex justify-between w-full items-center bg-stone-950 text-green-200 font-bold border-t border-green-900 sm:px-10 sm:py-5 p-2 fixed bottom-0";
 ---
 
 <footer class={headFootBase}>
-	<a href="/">~/{SITE_TITLE}/{today.getFullYear()}</a>
+	<a href="/">~/{SITE_TITLE}/{new Date().getFullYear().toString()}</a>
 	<div>
 		<a href="https://github.com/gnprwx" target="_blank">
 			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
